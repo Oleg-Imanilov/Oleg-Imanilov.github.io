@@ -9,3 +9,20 @@
   </div>
   <script type="module" src="main.js"></script> 
 </body>
+
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEDCOM Viewer</title>
+</head>
+<body>
+    <svg id="mysvg" style="position:absolute;top:0px;bottom:0;left:0;right:0;z-index:-1"></svg>
+    <div style="z-index: 1000;"><input id="gedinput" type="file" name="gedinput" multiple="false"  /></div>
+    <script type="module" src="main.js"></script>
+    <script>document.querySelector("#gedinput").addEventListener("change", previewImages);</script>
+</body>
+</html>
