@@ -79,8 +79,6 @@
                 maxY = Math.max(maxY, y)
             })
 
-            console.log(cX, cY, minX, maxX, minY, maxY)
-
             const x =  minX - 150
             const y =  minY - 150
             const w = maxX - minX + 300
@@ -105,10 +103,13 @@
     </script>
 </head>
 <body>
-    <span id="svgWrapper"><svg id="mysvg" class="mysvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg></span>
+    <svg id="mysvg" class="mysvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
     <div style="z-index: 1000;">
         <input id="gedinput" type="file" name="gedinput" multiple="false"  />
-        <input id="saveIt" type="button" value="Save" onclick="downloadToFile()" />
+        <input id="saveIt" type="button" value="Save" onclick="downloadToFile()" /><br/><br/>
+        
+        <select name="indi" id="indi">
+        </select>
     </div>
     <div id='help' class="help" onclick="toggleHelp()">?</div>
     <script type="module" src="/main.js"></script>
